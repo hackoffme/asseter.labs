@@ -12,4 +12,4 @@ python manage.py load
 python manage.py runserver
 
 ```
-Ипортировать в постман ```shop.postman_collection.json```
+Импортировать в постман ```shop.postman_collection.json```
