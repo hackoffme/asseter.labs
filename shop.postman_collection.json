@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "141eccd3-f09c-4194-9a6f-d37f01dcb8c2",
+		"name": "shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "reg",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "u",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "fghgfhhuser123",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "asf@sdf.dd",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login admin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "fghgfhhuser123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/token/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"token",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "user",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "fghgfhhuser123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/token/login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"token",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "catalog",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2cd088b49e4fdb3f776f9521d8ca54c9d1aa31a6",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/products/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"products",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add update cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2cd088b49e4fdb3f776f9521d8ca54c9d1aa31a6",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"quantity\": \"8\",\r\n\"item\": \"3\",\r\n\"color\": \"2\",\r\n\"size\": \"3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cart/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2cd088b49e4fdb3f776f9521d8ca54c9d1aa31a6",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item\": 2,\r\n    \"color\": 1,\r\n    \"size\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cart/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view cart",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2cd088b49e4fdb3f776f9521d8ca54c9d1aa31a6",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cart/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cart",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view all cart for admins",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 4753f6361f34da00043c725d3aa183b84672b54f",
+						"description": "admin",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 2cd088b49e4fdb3f776f9521d8ca54c9d1aa31a6",
+						"description": "user",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/cart/admin/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"cart",
+						"admin",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
