@@ -4,3 +4,6 @@ django-filter
 djoser
 Pillow
 Faker
+celery
+redis
+flower

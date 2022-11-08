@@ -1,0 +1,6 @@
+./env
+./.vscode
+.gitignore
+readme.md
+shop.postman_collection.json
+docker-compose.yaml

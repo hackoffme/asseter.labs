@@ -313,6 +313,14 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "get user list admin",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }

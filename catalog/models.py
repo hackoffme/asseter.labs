@@ -3,6 +3,7 @@ from django.db import models
 
 class Categories(models.Model):
     name = models.CharField(max_length=200, verbose_name='Категория')
+    no_size = models.BooleanField(default=False, verbose_name='Без размера')
 
     def __str__(self) -> str:
         return self.name
@@ -41,10 +42,12 @@ class Products(models.Model):
                               on_delete=models.CASCADE,
                               related_name='products',
                               verbose_name='Цвет')
-    size = models.ForeignKey(Size,
-                             on_delete=models.CASCADE,
-                             related_name='products',
-                             verbose_name='Размер')
+    # size = models.ForeignKey(Size,
+    #                          on_delete=models.CASCADE,
+    #                          blank=True,
+    #                          null=True,
+    #                          related_name='products',
+    #                          verbose_name='Размер')
     image = models.ImageField(upload_to='media/img/%Y/%m',
                               null=True,
                               blank=True,
