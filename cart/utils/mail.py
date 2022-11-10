@@ -17,3 +17,4 @@ def notification_task(user):
         app.control.revoke(user_tasks[user])
     current_task = task.send_mail.apply_async(countdown=5*60)
     user_tasks[user] = current_task.id
+
